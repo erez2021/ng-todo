@@ -13,7 +13,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
   public todos: Array<ITodo> = []
 
   private subscription: Subscription = new Subscription
-
+  
 
 
   constructor(private todoService: TodoService) { }
@@ -27,5 +27,13 @@ export class TodoListComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy() {
     this.subscription.unsubscribe()
+  }
+  public onTodoClick(todo: ITodo, index: number) {
+    this.todoService.setSelectedTodo(todo)
+    this.todos.forEach(todo => {
+      if (todo.selected) todo.selected = false
+      
+    })
+    this.todos[index].selected = true
   }
 }
