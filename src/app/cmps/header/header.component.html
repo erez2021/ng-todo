@@ -1,13 +1,13 @@
 <mat-toolbar>
-    <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Todo</span>
-    <span class="spacer"></span>
-    <button mat-icon-button class="icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+  <button mat-button [matMenuTriggerFor]="menu" class="menu-btn"><h1>CLICK ME!</h1></button>
+  <mat-menu #menu="matMenu">
+    <a href="https://hershkogram.herokuapp.com/"><button mat-menu-item><h3>hershkogram</h3> </button></a>
+    
+    <a href="https://erez2021.github.io/ng-mister-bitcoin/">
+    <button mat-menu-item><h3>Mr.Bitcoin</h3></button></a>
+  </mat-menu>
+  <span class="spacer"></span>
+ 
+ 
+  <span>Todo</span>
   </mat-toolbar>

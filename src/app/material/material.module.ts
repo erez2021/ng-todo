@@ -6,17 +6,28 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatDialogModule} from '@angular/material/dialog'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule} from "@angular/forms"
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatMenuModule} from '@angular/material/menu';
 
 
-const modules = [ MatToolbarModule,MatCardModule,MatDividerModule,MatDialogModule,
+
+
+const modules = [ MatToolbarModule,MatCardModule,MatDividerModule,MatDialogModule,MatFormFieldModule,MatInputModule,  FormsModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
   MatIconModule,
+  MatMenuModule,
   MatButtonModule]
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule, ...modules
-   
+  
   ],
   exports: modules
 })

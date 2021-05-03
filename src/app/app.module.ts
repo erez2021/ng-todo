@@ -9,6 +9,7 @@ import { TodoListComponent } from './cmps/todo-list/todo-list.component';
 import { HeaderComponent } from './cmps/header/header.component';
 import { TodoComponent } from './cmps/todo/todo.component';
 import { NewTodoComponent } from './cmps/new-todo/new-todo.component';
+import { TodoContainerComponent } from './cmps/todo-container/todo-container.component';
 
 
 
@@ -18,7 +19,8 @@ import { NewTodoComponent } from './cmps/new-todo/new-todo.component';
     TodoListComponent,
     HeaderComponent,
     TodoComponent,
-    NewTodoComponent
+    NewTodoComponent,
+    TodoContainerComponent
   ],
   imports: [
     BrowserModule,

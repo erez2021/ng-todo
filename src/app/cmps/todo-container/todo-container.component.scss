@@ -1,0 +1,22 @@
+.todos-container {
+    padding: 10px;
+    display: flex;
+    height: calc(100vh-64px);
+    gap: 10px;
+  
+  .list-container{
+    flex: 1
+  }
+  .todo-container{
+    flex: 3
+  }
+  .add-new-todo{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  
+  }
+  .material-icons{
+    font-size: 45px;
+  }
+}

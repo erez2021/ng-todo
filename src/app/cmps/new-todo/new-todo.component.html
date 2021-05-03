@@ -1,1 +1,19 @@
-<p>new-todo works!</p>
+<form  (ngSubmit)="onNewTodoSubmit()" #f="ngForm">
+    <h2>Add New Todo</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Todo Name</mat-label>
+        <input required=true type="text"  ngModel name="title" matInput placeholder="new todo">
+        <mat-error *ngIf="f.submitted && f.controls.title?.invalid">Title required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Todo Description</mat-label>
+        <input required=true type="text"  ngModel name="description" matInput placeholder="Describe">
+        <mat-error *ngIf="f.submitted && f.controls.description?.invalid">Description required</mat-error>
+    </mat-form-field>
+
+   
+
+    
+    <button  mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
